@@ -54,4 +54,4 @@ This sample uses [WebSphere Liberty](http://wasdev.net), Java EE interfaces, the
 
 * [A Blog post about microservices and this sample](https://developer.ibm.com/wasdev/blog/2016/06/01/putting-micro-microservices/)
 * [The talk which accompanies this demo](http://www.slideshare.net/HollyCummins/microservices-from-dream-to-reality-in-an-hour")
-[Liberty and microservices](https://developer.ibm.com/wasdev/docs/microservices/)
+* [Liberty and microservices](https://developer.ibm.com/wasdev/docs/microservices/)
