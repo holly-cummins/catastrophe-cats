@@ -1,0 +1,31 @@
+[{
+	"id": 20,
+	"realName": "Grumpy Cat",
+	"image": "https://pbs.twimg.com/profile_images/616542814319415296/McCTpH_E.jpg",
+	"attribution": "Twitter profile for @RealGrumpyCat"
+},{
+	"id": 40,
+	"realName": "Garfield",
+	"image": "http://vignette2.wikia.nocookie.net/p__/images/0/09/Garfield.png/revision/latest?cb=20120709141238&path-prefix=protagonist",
+	"attribution": "http://www.fanpop.com"
+},{
+	"id": 60,
+	"realName": "Catastrophe cat",
+	"image": "catimages/cropped-catastrophe-cat.png",
+	"attribution": "Holly Cummins"
+},{
+	"id": 120,
+	"realName": "The Cheshire Cat",
+	"image": "http://vignette4.wikia.nocookie.net/aliceinwonderland/images/5/59/Cheshire-Cat-color1.gif/revision/latest?cb=20120722054708",
+	"attribution": "http://aliceinwonderland.wikia.com"
+},{
+	"id": 150,
+	"realName": "Scratchy",
+	"image": "http://vignette3.wikia.nocookie.net/simpsons/images/4/41/Itchy_and_Scratchy_History.gif/revision/latest?cb=20110105220923",
+	"attribution": "http://simpsons.wikia.com"
+},{
+	"id": 210,
+	"realName": "Tom",
+	"image": "http://static3.comicvine.com/uploads/scale_small/2/26503/685922-tom_jerry.jpg",
+	"attribution": "http://www.comicvine.com/forums/battles-7/tom-from-tom-and-jerry-vs-wile-e-coyote-in-a-chase-1712674/"
+}]
