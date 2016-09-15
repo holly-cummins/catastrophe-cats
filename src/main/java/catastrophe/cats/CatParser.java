@@ -2,25 +2,24 @@ package catastrophe.cats;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Collection;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 
 import com.ibm.json.java.JSON;
 import com.ibm.json.java.JSONArray;
 import com.ibm.json.java.JSONObject;
 
 public class CatParser {
-	private static Map<Long, Cat> cats;
+	private static Map<Long, MiniCat> cats;
 
 	/**
 	 * @param string
 	 */
 	public CatParser() {
 		if (cats == null) {
-			cats = new HashMap<Long, Cat>();
+			cats = new HashMap<Long, MiniCat>();
 			InputStream stream = this.getClass().getResourceAsStream("/catstore.json");
 			try {
 				JSONArray ar = (JSONArray) JSON.parse(stream);
@@ -30,7 +29,7 @@ public class CatParser {
 					JSONObject catJson = it.next();
 					// The JsonObject returns a long by default for numbers
 					Long id = (Long) catJson.get("id");
-					Cat cat = new Cat(id, (String) catJson.get("realName"), (String) catJson.get("image"),
+					MiniCat cat = new MiniCat(id, (String) catJson.get("realName"), (String) catJson.get("image"),
 							(String) catJson.get("attribution"));
 					cats.put(id, cat);
 				}
@@ -42,16 +41,11 @@ public class CatParser {
 		}
 	}
 
-	public Set<MiniCat> getCats() {
-		Set<MiniCat> s = new HashSet<MiniCat>();
-		// TODO this is a seriously ugly way of doing this
-		for (Cat cat : cats.values()) {
-			s.add(new MiniCat(cat.getId(), cat.getImage()));
-		}
-		return s;
+	public Collection<MiniCat> getCats() {
+		return cats.values();
 	}
 
-	public Cat getCat(long id) {
+	public MiniCat getCat(long id) {
 		return cats.get(id);
 	}
 
