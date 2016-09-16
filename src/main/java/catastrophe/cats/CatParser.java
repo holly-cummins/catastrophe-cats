@@ -12,14 +12,14 @@ import com.ibm.json.java.JSONArray;
 import com.ibm.json.java.JSONObject;
 
 public class CatParser {
-	private static Map<Long, MiniCat> cats;
+	private static Map<Long, Cat> cats;
 
 	/**
 	 * @param string
 	 */
 	public CatParser() {
 		if (cats == null) {
-			cats = new HashMap<Long, MiniCat>();
+			cats = new HashMap<Long, Cat>();
 			InputStream stream = this.getClass().getResourceAsStream("/catstore.json");
 			try {
 				JSONArray ar = (JSONArray) JSON.parse(stream);
@@ -29,7 +29,7 @@ public class CatParser {
 					JSONObject catJson = it.next();
 					// The JsonObject returns a long by default for numbers
 					Long id = (Long) catJson.get("id");
-					MiniCat cat = new MiniCat(id, (String) catJson.get("realName"), (String) catJson.get("image"),
+					Cat cat = new Cat(id, (String) catJson.get("realName"), (String) catJson.get("image"),
 							(String) catJson.get("attribution"));
 					cats.put(id, cat);
 				}
@@ -41,11 +41,11 @@ public class CatParser {
 		}
 	}
 
-	public Collection<MiniCat> getCats() {
+	public Collection<Cat> getCats() {
 		return cats.values();
 	}
 
-	public MiniCat getCat(long id) {
+	public Cat getCat(long id) {
 		return cats.get(id);
 	}
 

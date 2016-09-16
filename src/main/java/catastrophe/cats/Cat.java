@@ -1,19 +1,19 @@
 package catastrophe.cats;
 
-public class MiniCat {
+public class Cat {
 	private long id;
 	private String image;
 	private String realName;
 	private String attribution;
 
-	public MiniCat(long id, String realName, String image, String attribution) {
+	public Cat(long id, String realName, String image, String attribution) {
 		this.id = id;
 		this.image = image;
 		this.realName = realName;
 		this.attribution = attribution;
 	}
 
-	public MiniCat(long id, String image) {
+	public Cat(long id, String image) {
 		this.id = id;
 		this.image = image;
 	}

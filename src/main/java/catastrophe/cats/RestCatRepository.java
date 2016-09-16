@@ -14,7 +14,7 @@ public class RestCatRepository {
 	@Path("cats")
 	@Produces(MediaType.APPLICATION_JSON)
 	@GET
-	public Collection<MiniCat> getAllCats() {
+	public Collection<Cat> getAllCats() {
 		return new CatParser().getCats();
 
 	}
@@ -22,7 +22,7 @@ public class RestCatRepository {
 	@Path("cat/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
 	@GET
-	public MiniCat getCat(@PathParam(value = "id") long id) {
+	public Cat getCat(@PathParam(value = "id") long id) {
 		return new CatParser().getCat(id);
 
 	}
