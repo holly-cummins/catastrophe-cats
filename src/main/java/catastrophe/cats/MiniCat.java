@@ -18,6 +18,10 @@ public class MiniCat {
 		this.image = image;
 	}
 
+	public long getId() {
+		return id;
+	}
+
 	public void setId(long id) {
 		this.id = id;
 	}
@@ -32,6 +36,10 @@ public class MiniCat {
 
 	public String getAttribution() {
 		return attribution;
+	}
+
+	public String getImage() {
+		return image;
 	}
 
 	public void setRealName(String realName) {
