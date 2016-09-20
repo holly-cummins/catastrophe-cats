@@ -8,7 +8,7 @@ This sample is one microservice in a [larger sample
 microservices application](http://github.com/holly-cummins/catastrophe-microservices). If you’re wondering about the names – all good internet content involves cats. This sample was written
 to be used as a live demo, and I have some experience of live demos, so I called it – of course – cat-astrophe.
 
-This service stores information about cats. 
+This service stores facts about cats, and also a smaller selection of facts about other creatures. 
 
 This application is designed to run on a [raspberry pi](http://www.linksprite.com/linksprite-pcduino/) (and optionally [Bluemix](http://bluemix.net)), and runs on [WebSphere Liberty](http://wasdev.net). 
 
@@ -35,7 +35,7 @@ Run
 
     gradle runServer
 
-The service should be testable on http://localhost:8082/rest/cats/cats.
+The service should be testable on http://localhost:8082/rest/cats/facts (you should see a collection of facts).
 
 ### Deploying to a single board computer 
 

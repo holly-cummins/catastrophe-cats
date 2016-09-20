@@ -1,0 +1,8 @@
+[ 
+{"creature": "cat",
+"facts": [{"fact": "Cats are excellent jumpers."}]},
+{"creature": "fish", 
+"facts": [{"fact": "Fish die if they try to breathe air."}]},
+{"creature": "octopus", 
+"facts": [{"fact": "The plural of octopus is octopods."}]}
+]

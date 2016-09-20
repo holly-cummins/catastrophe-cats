@@ -11,19 +11,21 @@ import javax.ws.rs.core.MediaType;
 @Path("cats")
 public class RestCatRepository {
 
-	@Path("cats")
+	private static final CatFactParser CAT_FACT_PARSER = new CatFactParser();
+
+	@Path("facts")
 	@Produces(MediaType.APPLICATION_JSON)
 	@GET
-	public Collection<Cat> getAllCats() {
-		return new CatParser().getCats();
+	public Collection<String> getAllFacts() {
+		return CAT_FACT_PARSER.getFacts();
 
 	}
 
-	@Path("cat/{id}")
+	@Path("fact/{creature}")
 	@Produces(MediaType.APPLICATION_JSON)
 	@GET
-	public Cat getCat(@PathParam(value = "id") long id) {
-		return new CatParser().getCat(id);
+	public String getFact(@PathParam(value = "creature") String creature) {
+		return CAT_FACT_PARSER.getFact(creature);
 
 	}
 }

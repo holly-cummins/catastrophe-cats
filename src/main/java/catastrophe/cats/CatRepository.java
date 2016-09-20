@@ -7,13 +7,13 @@ import javax.enterprise.context.ApplicationScoped;
 @ApplicationScoped
 public class CatRepository {
 
-	public Collection<Cat> getAllCats() {
-		return new CatParser().getCats();
+	public Collection<String> getAllFacts() {
+		return new CatFactParser().getFacts();
 
 	}
 
-	public Cat getCat(long id) {
-		return new CatParser().getCat(id);
+	public String getFact(String creature) {
+		return new CatFactParser().getFact(creature);
 
 	}
 }
