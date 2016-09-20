@@ -3,14 +3,14 @@
         <feature>jaxrs-2.0</feature>
         <feature>jsonp-1.0</feature>
         <feature>usr:consulDiscovery</feature>
+        <feature>localConnector-1.0</feature>
     </featureManager>
-    <application name='catastrophe-cats' location='catastrophe-cats.war' type='war' context-root='/'/>
-    <httpEndpoint id='defaultHttpEndpoint' host='*' httpPort='8082'/>
-    <httpDispatcher enableWelcomePage='false'/>
-    <applicationMonitor dropinsEnabled='false' updateTrigger='mbean'/>
-    <config updateTrigger='mbean'/>
+    <application context-root="/" location="catastrophe-cats.war" name="catastrophe-cats" type="war"/>
+    <httpEndpoint host="*" httpPort="8082" id="defaultHttpEndpoint"/>
+    <httpDispatcher enableWelcomePage="false"/>
+    <applicationMonitor dropinsEnabled="false" updateTrigger="mbean"/>
+    <config updateTrigger="mbean"/>
     
-    <consul.annotation.scanner server="catastrophe-consul.mybluemix.net" port="80"/>
+    <consul.annotation.scanner port="80" server="catastrophe-consul.mybluemix.net"/>
     
 </server>
-
